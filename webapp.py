@@ -96,6 +96,8 @@ def predict():
  	month = 'Jun-Sep'
     elif(month == 'Oct' or month == 'Nov' or month == 'Dec'):
  	month = 'Oct-Dec'
+    if(state == 'GANGETIC WEST BENGAL'):
+	terrain = 'Coastal-plateau'
     elif(state == 'ANDAMAN & NICOBAR ISLANDS'):
         terrain = 'Island'
     elif(state == 'ARUNACHAL PRADESH'):
