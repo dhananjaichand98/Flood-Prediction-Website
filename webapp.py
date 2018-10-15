@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Oct 14 12:56:55 2018
-
-@author: dcdev
-"""
-
 #requests are objects that flask handles (get set post, etc)
 from flask import Flask, render_template,request
 #scientific computing library for saving, reading, and resizing images
