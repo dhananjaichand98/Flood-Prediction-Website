@@ -103,14 +103,34 @@ def predict():
     terrain = ""
     if(month == 'Jan' or month == 'Feb'):
         month = 'Jan-Feb'
-    if(month == 'Mar' or month == 'Apr' or month == 'May')
+    else if(month == 'Mar' or month == 'Apr' or month == 'May')
  	month = 'Mar-May'
-    if(month == 'June' or month == 'Jul' or month == 'Aug' or month == 'Sep')
+    else if(month == 'June' or month == 'Jul' or month == 'Aug' or month == 'Sep')
  	month = 'Jun-Sep'
-    if(month == 'Oct' or month == 'Nov' or month == 'Dec')
+    else if(month == 'Oct' or month == 'Nov' or month == 'Dec')
  	month = 'Oct-Dec'
     if(state == 'GANGETIC WEST BENGAL'):
-        terrain = 'Coastal-plateau'    
+        terrain = 'Coastal-plateau'
+    else if(state == 'ANDAMAN & NICOBAR ISLANDS'):
+        terrain = 'Island'
+    else if(state == 'ARUNACHAL PRADESH'):
+        terrain = 'Hilly'
+    else if(state == 'ASSAM & MEGHALAYA'):
+        terrain = 'Hilly'
+    else if(state == 'BIHAR'):
+        terrain = 'Plain-land'
+    else if(state == 'CHATTISGARH'):
+        terrain = 'Hilly'
+    else if(state == 'COASTAL ANDHRA PRADESH'):
+        terrain = 'Coastal'
+    else if(state == 'COASTAL KARNATAKA'):
+        terrain = 'Coastal'
+    else if(state == 'EAST MADHYA PRADESH'):
+        terrain = 'Everything'
+    else if(state == 'EAST RAJASTHAN'):
+        terrain = 'Desert'
+    else if(state == 'GANGETIC WEST BENGAL'):
+        terrain = 'Coastal-plateau'
     #subdivision,quater,precipitation,terrain
     
     x = np.array([state,month,prec,terrain]);
