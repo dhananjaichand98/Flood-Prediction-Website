@@ -103,6 +103,12 @@ def predict():
     terrain = ""
     if(month == 'Jan' or month == 'Feb'):
         month = 'Jan-Feb'
+    if(month == 'Mar' or month == 'Apr' or month == 'May')
+ 	month = 'Mar-May'
+    if(month == 'June' or month == 'Jul' or month == 'Aug' or month == 'Sep')
+ 	month = 'Jun-Sep'
+    if(month == 'Oct' or month == 'Nov' or month == 'Dec')
+ 	month = 'Oct-Dec'
     if(state == 'GANGETIC WEST BENGAL'):
         terrain = 'Coastal-plateau'    
     #subdivision,quater,precipitation,terrain
