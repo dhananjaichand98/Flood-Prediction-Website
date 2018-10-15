@@ -96,8 +96,6 @@ def predict():
  	month = 'Jun-Sep'
     elif(month == 'Oct' or month == 'Nov' or month == 'Dec'):
  	month = 'Oct-Dec'
-    if(state == 'GANGETIC WEST BENGAL'):
-        terrain = 'Coastal-plateau'
     elif(state == 'ANDAMAN & NICOBAR ISLANDS'):
         terrain = 'Island'
     elif(state == 'ARUNACHAL PRADESH'):
@@ -116,8 +114,58 @@ def predict():
         terrain = 'Everything'
     elif(state == 'EAST RAJASTHAN'):
         terrain = 'Desert'
-    elif(state == 'GANGETIC WEST BENGAL'):
-        terrain = 'Coastal-plateau'
+    elif(state == 'EAST UTTAR PRADESH'):
+        terrain = 'Rugged'
+    elif(state == 'GUJARAT REGION'):
+        terrain = 'Desert/marsh'
+   elif(state == 'HARYANA DELHI & CHANDIGARH'):
+        terrain = 'Plain-land'
+   elif(state == 'HIMACHAL PRADESH'):
+        terrain = 'Hilly'
+   elif(state == 'JAMMU & KASHMIR'):
+        terrain = 'Hilly'
+   elif(state == 'JHARKHAND'):
+        terrain = 'Forest'
+   elif(state == 'KERALA'):
+        terrain = 'Coastal'
+   elif(state == 'KONKAN & GOA'):
+        terrain = 'Hilly/coastal'
+   elif(state == 'LAKSHWADEEP'):
+        terrain = 'Island'
+   elif(state == 'MADHYA MAHARASHTRA'):
+        terrain = 'Plain-land'
+   elif(state == 'MATATHWADA'):
+        terrain = 'Barren'
+   elif(state == 'NAGA MANI MIZO TRIPURA'):
+        terrain = 'Hilly'
+   elif(state == 'NORTH INTERIOR KARNATAKA'):
+        terrain = 'Coastal'
+   elif(state == 'ORISSA'):
+        terrain = 'Coastal'
+   elif(state == 'PUNJAB'):
+        terrain = 'Plain-land'
+   elif(state == 'RAYALSEEMA'):
+        terrain = 'Plain-land'
+   elif(state == 'SAURASHTRA & KUTCH'):
+        terrain = 'Hilly'
+   elif(state == 'SOUTH INTERIOR KARNATAKA'):
+        terrain = 'Coastal'
+   elif(state == 'SUB HIMALAYAN WEST BENGAL & SIKKIM'):
+        terrain = 'Hilly'
+   elif(state == 'TAMIL NADU'):
+        terrain = 'Hilly/coastal'
+   elif(state == 'TELANGANA'):
+        terrain = 'Hilly/plain'
+   elif(state == 'UTTARAKHAND'):
+        terrain = 'Hilly'
+   elif(state == 'VIDARBHA'):
+        terrain = 'Plain-land'
+   elif(state == 'WEST MADHYA PRADESH'):
+        terrain = 'Plain-land'
+   elif(state == 'WEST RAJASTHAN'):
+        terrain = 'Desert'
+   elif(state == 'WEST UTTAR PRADESH'):
+        terrain = 'Hilly'
     #subdivision,quater,precipitation,terrain
     
     x = np.array([state,month,prec,terrain]);
