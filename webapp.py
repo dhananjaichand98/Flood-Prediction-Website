@@ -2,7 +2,7 @@
 """
 Created on Sun Oct 14 12:56:55 2018
 
-@author: dcdev
+@author: techbusters
 """
 
 #Generating HTML from within Python is not fun, and actually pretty cumbersome because you have to do the
@@ -129,8 +129,58 @@ def predict():
         terrain = 'Everything'
     else if(state == 'EAST RAJASTHAN'):
         terrain = 'Desert'
-    else if(state == 'GANGETIC WEST BENGAL'):
-        terrain = 'Coastal-plateau'
+    else if(state == 'EAST UTTAR PRADESH'):
+        terrain = 'Rugged'
+    else if(state == 'GUJARAT REGION'):
+        terrain = 'Desert/marsh'
+   else if(state == 'HARYANA DELHI & CHANDIGARH'):
+        terrain = 'Plain-land'
+   else if(state == 'HIMACHAL PRADESH'):
+        terrain = 'Hilly'
+   else if(state == 'JAMMU & KASHMIR'):
+        terrain = 'Hilly'
+   else if(state == 'JHARKHAND'):
+        terrain = 'Forest'
+   else if(state == 'KERALA'):
+        terrain = 'Coastal'
+   else if(state == 'KONKAN & GOA'):
+        terrain = 'Hilly/coastal'
+   else if(state == 'LAKSHWADEEP'):
+        terrain = 'Island'
+   else if(state == 'MADHYA MAHARASHTRA'):
+        terrain = 'Plain-land'
+   else if(state == 'MATATHWADA'):
+        terrain = 'Barren'
+   else if(state == 'NAGA MANI MIZO TRIPURA'):
+        terrain = 'Hilly'
+   else if(state == 'NORTH INTERIOR KARNATAKA'):
+        terrain = 'Coastal'
+   else if(state == 'ORISSA'):
+        terrain = 'Coastal'
+   else if(state == 'PUNJAB'):
+        terrain = 'Plain-land'
+   else if(state == 'RAYALSEEMA'):
+        terrain = 'Plain-land'
+   else if(state == 'SAURASHTRA & KUTCH'):
+        terrain = 'Hilly'
+   else if(state == 'SOUTH INTERIOR KARNATAKA'):
+        terrain = 'Coastal'
+   else if(state == 'SUB HIMALAYAN WEST BENGAL & SIKKIM'):
+        terrain = 'Hilly'
+   else if(state == 'TAMIL NADU'):
+        terrain = 'Hilly/coastal'
+   else if(state == 'TELANGANA'):
+        terrain = 'Hilly/plain'
+   else if(state == 'UTTARAKHAND'):
+        terrain = 'Hilly'
+   else if(state == 'VIDARBHA'):
+        terrain = 'Plain-land'
+   else if(state == 'WEST MADHYA PRADESH'):
+        terrain = 'Plain-land'
+   else if(state == 'WEST RAJASTHAN'):
+        terrain = 'Desert'
+   else if(state == 'WEST UTTAR PRADESH'):
+        terrain = 'Hilly'
     #subdivision,quater,precipitation,terrain
     
     x = np.array([state,month,prec,terrain]);
