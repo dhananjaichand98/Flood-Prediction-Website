@@ -2,12 +2,9 @@
 """
 Created on Sun Oct 14 12:56:55 2018
 
-@author: techbusters
+@author: dcdev
 """
 
-#Generating HTML from within Python is not fun, and actually pretty cumbersome because you have to do the
-#HTML escaping on your own to keep the application secure. Because of that Flask configures the Jinja2 template engine 
-#for you automatically.
 #requests are objects that flask handles (get set post, etc)
 from flask import Flask, render_template,request
 #scientific computing library for saving, reading, and resizing images
@@ -59,18 +56,8 @@ def index():
 def predict():
 	
     print("running predict")
-    
-    #whenever the predict method is called, we're going
-	#to input the user drawn character as an image into the model
-	#perform inference, and return the classification
-	#get the raw data format of the image
 	
     data = request.get_data()
-    
-    #print ("data : ",data)
-	
-    #encode it into a suitable format
-	#convertImage(imgData)
     
     """
 	
@@ -103,84 +90,34 @@ def predict():
     terrain = ""
     if(month == 'Jan' or month == 'Feb'):
         month = 'Jan-Feb'
-    else if(month == 'Mar' or month == 'Apr' or month == 'May')
+    elif(month == 'Mar' or month == 'Apr' or month == 'May'):
  	month = 'Mar-May'
-    else if(month == 'June' or month == 'Jul' or month == 'Aug' or month == 'Sep')
+    elif(month == 'June' or month == 'Jul' or month == 'Aug' or month == 'Sep'):
  	month = 'Jun-Sep'
-    else if(month == 'Oct' or month == 'Nov' or month == 'Dec')
+    elif(month == 'Oct' or month == 'Nov' or month == 'Dec'):
  	month = 'Oct-Dec'
     if(state == 'GANGETIC WEST BENGAL'):
         terrain = 'Coastal-plateau'
-    else if(state == 'ANDAMAN & NICOBAR ISLANDS'):
+    elif(state == 'ANDAMAN & NICOBAR ISLANDS'):
         terrain = 'Island'
-    else if(state == 'ARUNACHAL PRADESH'):
+    elif(state == 'ARUNACHAL PRADESH'):
         terrain = 'Hilly'
-    else if(state == 'ASSAM & MEGHALAYA'):
+    elif(state == 'ASSAM & MEGHALAYA'):
         terrain = 'Hilly'
-    else if(state == 'BIHAR'):
+    elif(state == 'BIHAR'):
         terrain = 'Plain-land'
-    else if(state == 'CHATTISGARH'):
+    elif(state == 'CHATTISGARH'):
         terrain = 'Hilly'
-    else if(state == 'COASTAL ANDHRA PRADESH'):
+    elif(state == 'COASTAL ANDHRA PRADESH'):
         terrain = 'Coastal'
-    else if(state == 'COASTAL KARNATAKA'):
+    elif(state == 'COASTAL KARNATAKA'):
         terrain = 'Coastal'
-    else if(state == 'EAST MADHYA PRADESH'):
+    elif(state == 'EAST MADHYA PRADESH'):
         terrain = 'Everything'
-    else if(state == 'EAST RAJASTHAN'):
+    elif(state == 'EAST RAJASTHAN'):
         terrain = 'Desert'
-    else if(state == 'EAST UTTAR PRADESH'):
-        terrain = 'Rugged'
-    else if(state == 'GUJARAT REGION'):
-        terrain = 'Desert/marsh'
-   else if(state == 'HARYANA DELHI & CHANDIGARH'):
-        terrain = 'Plain-land'
-   else if(state == 'HIMACHAL PRADESH'):
-        terrain = 'Hilly'
-   else if(state == 'JAMMU & KASHMIR'):
-        terrain = 'Hilly'
-   else if(state == 'JHARKHAND'):
-        terrain = 'Forest'
-   else if(state == 'KERALA'):
-        terrain = 'Coastal'
-   else if(state == 'KONKAN & GOA'):
-        terrain = 'Hilly/coastal'
-   else if(state == 'LAKSHWADEEP'):
-        terrain = 'Island'
-   else if(state == 'MADHYA MAHARASHTRA'):
-        terrain = 'Plain-land'
-   else if(state == 'MATATHWADA'):
-        terrain = 'Barren'
-   else if(state == 'NAGA MANI MIZO TRIPURA'):
-        terrain = 'Hilly'
-   else if(state == 'NORTH INTERIOR KARNATAKA'):
-        terrain = 'Coastal'
-   else if(state == 'ORISSA'):
-        terrain = 'Coastal'
-   else if(state == 'PUNJAB'):
-        terrain = 'Plain-land'
-   else if(state == 'RAYALSEEMA'):
-        terrain = 'Plain-land'
-   else if(state == 'SAURASHTRA & KUTCH'):
-        terrain = 'Hilly'
-   else if(state == 'SOUTH INTERIOR KARNATAKA'):
-        terrain = 'Coastal'
-   else if(state == 'SUB HIMALAYAN WEST BENGAL & SIKKIM'):
-        terrain = 'Hilly'
-   else if(state == 'TAMIL NADU'):
-        terrain = 'Hilly/coastal'
-   else if(state == 'TELANGANA'):
-        terrain = 'Hilly/plain'
-   else if(state == 'UTTARAKHAND'):
-        terrain = 'Hilly'
-   else if(state == 'VIDARBHA'):
-        terrain = 'Plain-land'
-   else if(state == 'WEST MADHYA PRADESH'):
-        terrain = 'Plain-land'
-   else if(state == 'WEST RAJASTHAN'):
-        terrain = 'Desert'
-   else if(state == 'WEST UTTAR PRADESH'):
-        terrain = 'Hilly'
+    elif(state == 'GANGETIC WEST BENGAL'):
+        terrain = 'Coastal-plateau'
     #subdivision,quater,precipitation,terrain
     
     x = np.array([state,month,prec,terrain]);
@@ -231,7 +168,6 @@ def predict():
     print(x," type : ",type(x) )
     
     with graph.as_default():
-		#perform the prediction
 		
         print("model : ",model)
         
@@ -241,9 +177,6 @@ def predict():
 		
         print(np.argmax(out,axis=1))
 		
-        #print "debug3"
-		
-        #convert the response to a string
 		
         response = np.array_str(np.argmax(out,axis=1))
 		
@@ -266,6 +199,3 @@ if __name__ == "__main__":
     """
     
     app.run(port=8081)
-	
-    #optional if we want to run in debugging mode
-	#app.run(debug=True)
