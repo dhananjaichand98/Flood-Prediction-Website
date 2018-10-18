@@ -52,7 +52,7 @@ def jsonlocation():
         #print('State:' + state)
         #print(response.content)
         #return response.content
-        return redirect(url_for('xmlweather', city=city, state=state, date=date, latitude=lat, longitude=lon))
+        return redirect(url_for('jsonweather', city=city, state=state, date=date, latitude=lat, longitude=lon))
     else:
         return 'Status: %s! Server issue! Please try again later!' % auth
     #return requests.get('http://dev.virtualearth.net/REST/v1/Locations?CountryRegion=IN&locality=New%20Delhi&key=AmNf5Tdob5XL3Qm1EeSA5sQEdo6271GFyb1p7xMuS9Svj0VvvKKJv6i6dM573OeD').content
@@ -60,7 +60,7 @@ def jsonlocation():
 
 
 @app.route('/weather')
-def xmlweather():
+def jsonweather():
     city = request.args.get('city')
     state = request.args.get('state')
     date = request.args.get('date')
