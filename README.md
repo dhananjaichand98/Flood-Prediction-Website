@@ -1,4 +1,4 @@
-# Flood-Prediction-Website
+# Ready4Floods 
 A website that uses machine learning models to deliver chances of floods based on users location queries
 
 We have created a robust and responsive website that uses machine learning to predict the chances and severity of floods in a given region and give preventive measures to the user based on the result.
